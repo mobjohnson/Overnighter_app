@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703150900) do
+ActiveRecord::Schema.define(version: 20140703163900) do
 
   create_table "camps", force: true do |t|
     t.string   "name"
-    t.string   "location"
     t.string   "facilities"
     t.string   "terrain"
     t.datetime "created_at"

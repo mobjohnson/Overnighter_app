@@ -13,11 +13,11 @@
     <div>
       <li>
       <%= camp.name %>
-      <%= ": #{camp.location}, " %>
+      <%= ": #{camp.address} ; " %>
       <%= camp.facilities %>
-        <%= ": #{camp.terrain}, " %>
-      <%= " -  rating: #{camp.fires} " %>
-      <%= " -  comment: #{camp.activities} " %>
+        <%= "; #{camp.terrain} " %>
+      <%= " -  Fires: #{camp.fires} " %>
+      <%= " -  Primary Activity: #{camp.activities} " %>
       <%= link_to "edit", edit_camp_path(camp) %>
       <%= link_to "delete", camp_path(camp), method: :delete, data: { confirm: 'Are you sure>' }  %></li>
     </div>

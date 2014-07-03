@@ -28,19 +28,19 @@
 	</div>
 	<div>
 		<%= f.label :facilities %>
-		<%= f.text_field :facilities %>
+		<%= f.select :facilities, ['Primitive', 'Bathrooms', 'Showers & Bathrooms'] %>
 	</div>
 	<div>
 		<%= f.label :terrain %>
-		<%= f.text_field :terrain %>
+		<%= f.select :terrain, ['Mountanous', 'Hilly', 'Flat'] %>
 	</div>
 	<div>
 		<%= f.label :fires %>
-		<%= f.text_field :fires %>
+		<%= f.select :fires, ['Permitted', 'Prohibited'] %>
 	</div>
 	<div>
 		<%= f.label :activities %>
-		<%= f.text_field :activities %>
+		<%= f.select :activities, ['Canoeing', 'Fishing', 'Hiking'] %>
 	</div>
 	<div>
 		<%= f.submit %>
