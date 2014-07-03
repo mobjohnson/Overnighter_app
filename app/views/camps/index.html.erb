@@ -19,7 +19,9 @@
       <%= " -  Fires: #{camp.fires} " %>
       <%= " -  Primary Activity: #{camp.activities} " %>
       <%= link_to "edit", edit_camp_path(camp) %>
-      <%= link_to "delete", camp_path(camp), method: :delete, data: { confirm: 'Are you sure>' }  %></li>
+      <%= link_to "delete", camp_path(camp), method: :delete, data: { confirm: 'Are you sure>' }  %>
+      <%= link_to "show comments", camp_path(camp) %>
+      </li>
     </div>
   <% end %>
 

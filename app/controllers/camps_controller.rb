@@ -41,6 +41,12 @@ class CampsController < ApplicationController
 		end
 	end
 
+	def show
+		@camp = Camp.find(params[:id])
+		@comments = Comment.where(commentable_id:(params[:id]))
+	end
+
+
 	def destroy
 		@camp = Camp.find(params[:id])
 		@camp.destroy
@@ -52,5 +58,4 @@ class CampsController < ApplicationController
 	def camp_params
 		params.require(:camp).permit(:name, :facilities, :terrain, :address, :fires, :activities)
 	end
-
 end
