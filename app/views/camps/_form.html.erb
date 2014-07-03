@@ -1,0 +1,53 @@
+<% if @camp.errors.any? %>
+	<% @camp.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+<% end %>
+
+<%= form_for @camp do |f| %>
+	<p></p>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :location %>
+		<%= f.text_area :location %>
+	</div>
+	<div>
+		<%= f.label :address %>
+		<%= f.text_area :address %>
+	</div>
+	<div>
+		<%= f.label :latitude %>
+		<%= f.text_area :latitude %>
+	</div>
+	<div>
+		<%= f.label :longitude %>
+		<%= f.text_area :longitude %>
+	</div>
+	<div>
+		<%= f.label :facilities %>
+		<%= f.text_field :facilities %>
+	</div>
+	<div>
+		<%= f.label :terrain %>
+		<%= f.text_field :terrain %>
+	</div>
+	<div>
+		<%= f.label :rating %>
+		<%= f.text_field :rating %>
+	</div>
+	<div>
+		<%= f.label :comments %>
+		<%= f.text_field :comments %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+
+	<div>
+		<%= link_to "index", root_path %></li>
+
+	</div>
+<% end %>
