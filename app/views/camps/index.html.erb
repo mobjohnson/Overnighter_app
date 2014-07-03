@@ -16,8 +16,8 @@
       <%= ": #{camp.location}, " %>
       <%= camp.facilities %>
         <%= ": #{camp.terrain}, " %>
-      <%= " -  rating: #{camp.rating} " %>
-      <%= " -  comment: #{camp.comments} " %>
+      <%= " -  rating: #{camp.fires} " %>
+      <%= " -  comment: #{camp.activities} " %>
       <%= link_to "edit", edit_camp_path(camp) %>
       <%= link_to "delete", camp_path(camp), method: :delete, data: { confirm: 'Are you sure>' }  %></li>
     </div>
