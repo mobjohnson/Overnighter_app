@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 
 gem 'geocoder'
 gem 'gmaps4rails'
+
+gem 'acts_as_commentable'
