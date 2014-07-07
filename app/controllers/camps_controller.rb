@@ -7,12 +7,8 @@ class CampsController < ApplicationController
 			@camps = Camp.search_camp(params[:q])
 		else
 		@camps = Camp.all
-		@hash = Gmaps4rails.build_markers(@camps) do |camp, marker|
-		  marker.lat camp.latitude
-		  marker.lng camp.longitude
-		  marker.infowindow camp.name
 		end
-		end
+		gmail_hash
 	end	
 
 	def new
@@ -41,6 +37,7 @@ class CampsController < ApplicationController
 		end
 	end
 
+	## using to show comments
 	def show
 		@camp = Camp.find(params[:id])
 		@comments = Comment.where(commentable_id:(params[:id]))
@@ -51,6 +48,14 @@ class CampsController < ApplicationController
 		@camp = Camp.find(params[:id])
 		@camp.destroy
 		redirect_to camps_path
+	end
+
+	def gmail_hash
+		@hash = Gmaps4rails.build_markers(@camps) do |camp, marker|
+		  	marker.lat camp.latitude
+		  	marker.lng camp.longitude
+		  	marker.infowindow camp.name
+		end  	
 	end
 
 	private
