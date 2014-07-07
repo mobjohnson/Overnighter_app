@@ -6,16 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% if user_signed_in? %>
-    <%= "Welcome, #{current_user.email}!"  %>
-  <% end %>
-  <p></p>
-
-
-  <%= yield %>
-
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+   <%= "Overnighter" %>
+ <!--  </div>
+  <div id="columns">
+    <div id="side">
+       <p class="notice"><%#= notice %></p>
+       <p class="alert"><%#= alert %></p> -->
+        <%# if user_signed_in? %>
+      <%#= "Welcome, #{current_user.email}!"  %>
+      <%# end %>
+  
+    
+  </div>
+  
+   <%= yield %>
+  
 </body>
 </html>
