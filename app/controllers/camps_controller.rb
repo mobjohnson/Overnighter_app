@@ -26,6 +26,8 @@ class CampsController < ApplicationController
 
 	def edit
 		@camp = Camp.find(params[:id])
+		@camps = @camp
+		gmail_hash
 	end
 
 	def update
