@@ -1,15 +1,14 @@
 
 
-<div id='right'>
-  <%= link_to "About Me", static_pages_about_path %>
-</div>
+
 <%#= link_to "Sign Out", destroy_user_session_path(current_user) %>
-<%= render partial: 'search_camp' %>
 
 
 
-<div id="columns">
-  <div id="side">
+
+
+
+    <%= render partial: 'search_camp' %>
  
     <% @camps.each do |camp| %>
     
@@ -30,15 +29,13 @@
       <div>
          <p></p> 
       <%= link_to "Create New Camp", new_camp_path %>
-       </div>
-  </div>      
-
-
-
-  <div id="main">
-    <%= render partial: 'map' %>
-
     
+
+
+  <div id ="columns" >
+    <div id="main">
+    <%= render partial: 'map' %>    
+    </div>
   </div>
 </div>
 

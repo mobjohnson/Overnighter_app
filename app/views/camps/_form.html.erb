@@ -10,38 +10,36 @@
 		<%= f.label :name %>
 		<%= f.text_field :name %>
 	</div>
+	<p></p>
 	<div>
 		<%= f.label :address %>
 		<%= f.text_area :address %>
 	</div>
-	<div>
-		<%#= f.label :latitude %>
-		<%#= f.text_area :latitude %>
-	</div>
-	<div>
-		<%#= f.label :longitude %>
-		<%#= f.text_area :longitude %>
-	</div>
+	<p></p>
 	<div>
 		<%= f.label :facilities %>
 		<%= f.select :facilities, ['Primitive', 'Bathrooms', 'Showers & Bathrooms'] %>
 	</div>
+	<p></p>
 	<div>
 		<%= f.label :terrain %>
 		<%= f.select :terrain, ['Mountainous', 'Hilly', 'Flat'] %>
 	</div>
+	<p></p>
 	<div>
 		<%= f.label :fires %>
 		<%= f.select :fires, ['Permitted', 'Prohibited'] %>
 	</div>
+	<p></p>
 	<div>
 		<%= f.label :activities %>
 		<%= f.select :activities, ['Canoeing', 'Fishing', 'Hiking'] %>
 	</div>
+	<p></p>
 	<div>
 		<%= f.submit %>
 	</div>
-
+	<p></p>
 	<div>
 		<%= link_to "Home", root_path %></li>
 

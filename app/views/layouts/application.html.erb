@@ -11,19 +11,24 @@
 <body class="<%= controller.controller_name %>">
   <div id="banner">
    <%= "Overnighter" %>
- <!--  </div>
+ </div>
+ <div id='right'>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  <%= link_to "About Me", static_pages_about_path %>
+</div>
   <div id="columns">
     <div id="side">
-       <p class="notice"><%#= notice %></p>
-       <p class="alert"><%#= alert %></p> -->
-        <%# if user_signed_in? %>
-      <%#= "Welcome, #{current_user.email}!"  %>
-      <%# end %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
+        <% if user_signed_in? %>
+      <%= "Logged in as: #{current_user.email}"  %>
+      <% end %>
+      <p></p>
+    
+  
+    <%= yield %>
     </div>
     
   </div>
-  
-    <%= yield %>
-  
 </body>
 </html>
