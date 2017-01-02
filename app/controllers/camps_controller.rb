@@ -45,7 +45,6 @@ class CampsController < ApplicationController
 		@comments = Comment.where(commentable_id:(params[:id]))
 	end
 
-
 	def destroy
 		@camp = Camp.find(params[:id])
 		@camp.destroy

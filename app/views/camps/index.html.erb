@@ -1,40 +1,23 @@
-
-
-
-<%#= link_to "Sign Out", destroy_user_session_path(current_user) %>
-
-
-
-
-
-
-    <%= render partial: 'search_camp' %>
+<%= render partial: 'search_camp' %>
  
-    <% @camps.each do |camp| %>
-    
-        <ul>
-         <bold><%= camp.name %></bold>
-             <%#= ": #{camp.address} ; " %>
-            <%#= camp.facilities %>
-             <%#= "; #{camp.terrain} " %>
-             <%#= " -  Fires: #{camp.fires} " %>
-            <%#= " -  Primary Activity: #{camp.activities} " %>
-          <div><%= link_to "Edit", edit_camp_path(camp) %>
-          <%= link_to "Delete", camp_path(camp), method: :delete, data: { confirm: 'Are   you sure>' }  %>
-          <%= link_to "Show Comments", camp_path(camp) %>
-        </div>
-        </ul>
-    
-        <% end %>
-      <div>
-         <p></p> 
-      <%= link_to "Create New Camp", new_camp_path %>
-    
+<% @camps.each do |camp| %>
+  <ul>
+   <bold><%= camp.name %></bold>
 
+    <div>
+      <%= link_to "Edit", edit_camp_path(camp) %>
+      <%= link_to "Delete", camp_path(camp), method: :delete, data: { confirm: 'Are you sure>' }  %>
+      <%= link_to "Show Comments", camp_path(camp) %>
+  </div>
+  </ul>
+<% end %>
 
+<div>
+  <p></p> 
+  <%= link_to "Create New Camp", new_camp_path %>  
   <div id ="columns" >
     <div id="main">
-    <%= render partial: 'map' %>    
+      <%= render partial: 'map' %>    
     </div>
   </div>
 </div>

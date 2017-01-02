@@ -1,5 +1,3 @@
-
- 
 <h2>Add a comment:</h2>
 <%= form_for([@camp, @camp.comments.build]) do |f| %>
   <p>
@@ -14,30 +12,30 @@
     <%= f.submit %>
   </p>
 <% end %>
- 
+
 <%= link_to 'Back', camps_path %>
 
 <div id ="columns" >
     <div id="main" style='position: absolute; left: 90px; top: 100px; width: 800px; height: 400px;'>
    		<h2><%= "Comments for #{@camp.name}" %></h2>
-
 		<% if @camp.comments.length > 1 %>
-		<h1> <% @camp.comments.each do |comments| %></h1>
-		<div>
-			<% if comments.title && comments.comment %>
-		  <li>
-		  <%= " #{comments.title} ; " %>
-		  <%= comments.comment %>
+			<h1> <% @camp.comments.each do |comments| %></h1>
 			<div>
-          	<%= link_to "Delete", "/camps/#{@camp.id}/comments/#{comments.id}", method: :delete, data: { confirm: 'Are you sure>' }  %>
-        	</div>
-
-
-		  </li>
-		  <% end %>
-		<% end %>
+				<% if comments.title && comments.comment %>
+				  	<li>
+				  	<%= " #{comments.title}: " %>
+				  	<%= comments.comment %>
+					<div>
+		          	<%= link_to "Delete", "/camps/#{@camp.id}/comments/#{comments.id}", method: :delete, data: { confirm: 'Are you sure>' }  %>
+		        	</div>
+		        	<div>
+		        	<p></p>
+		        	</div>
+					</li>
+			  	<% end %>
+			<% end %>
 		<% else %>
-		There aren't any comments for <%= @camp.name %>.
+			There aren't any comments for <%= @camp.name %>.
 		<% end %>
     </div>
  </div>
